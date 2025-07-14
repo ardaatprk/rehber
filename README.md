@@ -1,6 +1,6 @@
 # Ödev 3 - Rehber Web Sitesi
 
-- Sayfaya Gitmek İçin Tıklayınız ()
+- Sayfaya Gitmek İçin Tıklayınız (https://ardaatprk.github.io/rehber/)
 
 Bu proje HTML kullanılarak hazırlanmış 4 sayfalık temel bir rehber web sitesidir.
 
