@@ -1,0 +1,307 @@
+/* Genel sayfa ayarları */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigasyon */
+nav {
+  background-color: #1e88e5;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffeb3b;
+}
+
+/* Ana içerik kutusu */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Başlıkları ortala */
+h1, h2, h3 {
+  color: #1e88e5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Ana içerik kutusu için hizalama (tüm sayfalarda main etiketi yok, body'ye uygulayalım) */
+body > h1, body > h2, body > h3, body > p, body > ul, body > ol, body > img, body > form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
+
+/* Paragrafları daha okunaklı yap */
+p {
+  margin-bottom: 15px;
+  font-size: 1.08rem;
+  text-align: justify;
+}
+
+/* Listeler */
+ul, ol {
+  margin: 15px 0 20px 20px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Görseller */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  border: 3px solid #1e88e5;
+  box-shadow: 0 2px 10px rgba(30,136,229,0.07);
+}
+
+/* Form alanları */
+form {
+  margin: 30px auto 0 auto;
+  max-width: 400px;
+  background: #fff;
+  padding: 24px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(30,136,229,0.08);
+  border: 1.5px solid #e3e6ea;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input[type="submit"] {
+  background-color: #1e88e5;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #1565c0;
+}
+
+/* Servisler sayfası için 2'li grid ve kart çerçevesi */
+.servisler-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 900px;
+  margin: 32px auto 0 auto;
+  padding: 0 10px;
+}
+
+.servis-kart {
+  background: #fff;
+  border: 2px solid #1e88e5;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(30,136,229,0.07);
+  padding: 28px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 180px;
+}
+
+.servis-kart h3 {
+  margin-bottom: 14px;
+  color: #1565c0;
+  text-align: center;
+}
+
+.servis-kart p, .servis-kart ul {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Ana sayfa için yazı ve resmi yan yana hizala */
+.ana-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
+
+.ana-yazi {
+  flex: 1 1 320px;
+  min-width: 260px;
+}
+
+.ana-resim {
+  flex: 1 1 320px;
+  min-width: 220px;
+  display: flex;
+  justify-content: center;
+}
+
+.ana-resim img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+}
+
+/* Ana sayfa kart çerçevesi */
+.ana-kart {
+  background: #fff;
+  border: 2px solid #1e88e5;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(30,136,229,0.09);
+  padding: 36px 28px;
+  max-width: 980px;
+  margin: 36px auto 0 auto;
+}
+
+/* Servis kartı hover animasyonu */
+.servis-kart {
+  transition: box-shadow 0.3s cubic-bezier(.4,2,.6,1), transform 0.25s cubic-bezier(.4,2,.6,1);
+}
+
+.servis-kart:hover {
+  box-shadow: 0 8px 32px rgba(30,136,229,0.18);
+  transform: scale(1.045) translateY(-4px);
+  border-color: #1565c0;
+}
+
+/* İletişim sayfası yan yana düzen */
+.iletisim-flex {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  flex-wrap: wrap;
+}
+
+.iletisim-yazi {
+  flex: 1 1 320px;
+  min-width: 240px;
+  max-width: 350px;
+  padding: 28px 18px;
+}
+
+.iletisim-flex form {
+  flex: 1 1 320px;
+  min-width: 240px;
+  max-width: 400px;
+  margin: 0;
+}
+
+footer {
+  width: 100%;
+  background: #1e88e5;
+  color: #fff;
+  padding: 18px 0 12px 0;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: auto;
+  letter-spacing: 0.5px;
+}
+
+.footer-icerik {
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0.93;
+}
+
+/* Mobil uyum */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .servisler-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .ana-flex {
+    flex-direction: column;
+    gap: 24px;
+    margin: 20px 0;
+  }
+  .ana-resim img {
+    max-width: 100%;
+  }
+  .ana-kart {
+    padding: 18px 6px;
+    margin: 16px 4px 0 4px;
+  }
+}
+
+@media (max-width: 900px) {
+  .iletisim-flex {
+    flex-direction: column;
+    gap: 18px;
+    margin: 20px 0 0 0;
+  }
+  .iletisim-yazi, .iletisim-flex form {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
