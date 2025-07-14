@@ -258,6 +258,21 @@ footer {
   opacity: 0.93;
 }
 
+/* Kartlar ve ana içerik ile footer arası boşluk */
+.ana-kart,
+.servisler-grid,
+.iletisim-flex {
+  margin-bottom: 32px;
+}
+
+/* Başlıklar ile kartlar arası boşluk */
+h1 + .ana-kart,
+h2 + .ana-kart,
+h2 + .servisler-grid,
+h2 + .iletisim-flex {
+  margin-top: 24px;
+}
+
 /* Mobil uyum */
 @media (max-width: 600px) {
   nav {
@@ -291,6 +306,17 @@ footer {
   .ana-kart {
     padding: 18px 6px;
     margin: 16px 4px 0 4px;
+  }
+  .ana-kart,
+  .servisler-grid,
+  .iletisim-flex {
+    margin-bottom: 20px;
+  }
+  h1 + .ana-kart,
+  h2 + .ana-kart,
+  h2 + .servisler-grid,
+  h2 + .iletisim-flex {
+    margin-top: 14px;
   }
 }
 
